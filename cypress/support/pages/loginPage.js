@@ -5,11 +5,16 @@ class LoginPage {
         loginLogo: () => cy.get('.login_logo'),
         inputUserName: () => cy.get('[data-test="username"]'),
         inputPassword: () => cy.get('[data-test="password"]'),
-        buttonLogin: () => cy.get('#login-button')
+        buttonLogin: () => cy.get('#login-button'),
+        errorLoginLockedOut: () => cy.get('[data-test="error"]')
     }
 
     confirmPage() {
         this.elements.loginLogo().should("be.visible")
+    }
+
+    confirmMessageError() {
+        this.elements.errorLoginLockedOut().should("be.visible")
     }
 
     fillUserName(userName) {
@@ -23,5 +28,7 @@ class LoginPage {
     clickConfirmLogin() {
         this.elements.buttonLogin().click();
     }
+
+    
 
 } export default new LoginPage();
