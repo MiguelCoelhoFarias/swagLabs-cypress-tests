@@ -48,19 +48,19 @@ class HomePage {
     }
 
     confirmProductName() {
-        this.elements.productNameOnCart().should('be.visible')
+        this.elements.productNameOnCart().should('be.visible');
     }
 
     confirmProductDesc() {
-        this.elements.productDescOnCart().should('be.visible')
+        this.elements.productDescOnCart().should('be.visible');
     }
 
     confirmProductPrice() {
-        this.elements.productPriceOnCart().should('be.visible')
+        this.elements.productPriceOnCart().should('be.visible');
     }
     
     confirmProductQuantity() {
-        this.elements.productQntOnCart().should('be.visible')
+        this.elements.productQntOnCart().should('be.visible');
     }
 
     removeProductOfCart() {
