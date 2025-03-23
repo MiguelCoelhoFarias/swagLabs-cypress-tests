@@ -9,31 +9,31 @@ class LoginPage {
     }
 
     confirmPage() {
-        this.elements.loginLogo().should("be.visible")
+        this.elements.loginLogo().should("be.visible");
     }
 
     confirmMessageError() {
-        this.elements.errorLoginLockedOut().should("be.visible")
+        this.elements.errorLoginLockedOut().should("be.visible");
     }
 
     confirmErrorByPasswordRequired() {
-        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Password is required')
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Password is required');
     }
 
     confirmErrorByNameRequired() {
-        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username is required')
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username is required');
     }
 
     confirmErrorByUserInvalid() {
-        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username and password do not match any user in this service')
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username and password do not match any user in this service');
     }
 
     fillUserName(userName) {
-        this.elements.inputUserName().type(userName)
+        this.elements.inputUserName().type(userName);
     }
 
     fillPassword(password) {
-        this.elements.inputPassword().type(password)
+        this.elements.inputPassword().type(password);
     }
 
     clickConfirmLogin() {

@@ -8,7 +8,6 @@ export const getUserValid = () => {
     }
 }
 
-
 export const getUserInformationForBuy = () => {
     return {
         firstName: faker.person.firstName(),
