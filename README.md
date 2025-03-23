@@ -26,7 +26,7 @@ O **Page Object Model (POM)** é um padrão de projeto para automação de teste
 
 ## 📊 Relatório Produzido
 
-![Relatório de Testes](https://github.com/user-attachments/assets/637f4c98-d6dd-449c-b0df-0d9626d5aa38)
+![Relatório de Testes](https://github.com/user-attachments/assets/cf71df0e-5498-4eae-9bc3-63c1eb0b7597)
 
 ## 📂 Arquitetura do Projeto
 
