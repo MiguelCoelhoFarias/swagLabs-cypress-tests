@@ -1,7 +1,7 @@
 import  loginData  from '../fixtures/loginData.json'
 import  loginPage  from '../support/pages/loginPage'
 import  homePage from '../support/pages/productPage.js'
-import faker, { getUserValid } from '../support/faker.js'
+import { getUserValid } from '../support/faker.js'
 
 describe('Testes de login', () => {
 
@@ -9,7 +9,7 @@ describe('Testes de login', () => {
     cy.visit('/');
   });
 
-    it('teste de login com usuário válido - standard_user', () => {
+    it('teste de login com usuário válido', () => {
       loginPage.confirmPage();
       loginPage.fillUserName(loginData.loginStandardUser.userName);
       loginPage.fillPassword(loginData.loginStandardUser.password);
