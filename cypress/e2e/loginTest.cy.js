@@ -1,8 +1,9 @@
 import  loginData  from '../fixtures/loginData.json'
 import  loginPage  from '../support/pages/loginPage'
 import  homePage from '../support/pages/homePage'
+import faker, { getUserValid } from '../support/faker.js'
 
-describe('Login User tests', () => {
+describe('Testes de login', () => {
 
   beforeEach(() => {
     cy.visit('/')
@@ -33,7 +34,7 @@ describe('Login User tests', () => {
       homePage.confirmProductImageNotLoaded();
     })
 
-    it.only('teste de login com usuário com problema de performance', () => {
+    it('teste de login com usuário com problema de performance', () => {
       loginPage.confirmPage();
       loginPage.fillUserName(loginData.loginPerformanceGlitchUser.userName);
       loginPage.fillPassword(loginData.loginPerformanceGlitchUser.password);
@@ -44,5 +45,30 @@ describe('Login User tests', () => {
       }))
       homePage.confirmHomePage();
     })
+
+
+    it.only('testar login com usuário invalido', () => {
+      const usuario = getUserValid();
+      loginPage.fillUserName(usuario.userName);
+      loginPage.fillPassword(usuario.password);
+      loginPage.clickConfirmLogin();
+      loginPage.confirmErrorByUserInvalid();
+    })
+
+
+    it('testar login com campo Senha vazio', () => {
+      loginPage.confirmPage();
+      loginPage.fillUserName(loginData.loginStandardUser.userName);
+      loginPage.clickConfirmLogin();
+      loginPage.confirmErrorByPasswordRequired();
+    })
+
+    it('testar login com campo Nome de Usuario vazio', () => {
+      loginPage.confirmPage();
+      loginPage.fillPassword(loginData.loginStandardUser.password);
+      loginPage.clickConfirmLogin();
+      loginPage.confirmErrorByNameRequired();
+    })
+
 
   })

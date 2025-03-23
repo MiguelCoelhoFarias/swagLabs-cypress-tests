@@ -1,4 +1,3 @@
-//construcao de classe como arq padrao, contendo mapeamento de elementos e alem disso acoes com esses elementos.
 class LoginPage {
 
     elements = {
@@ -15,6 +14,18 @@ class LoginPage {
 
     confirmMessageError() {
         this.elements.errorLoginLockedOut().should("be.visible")
+    }
+
+    confirmErrorByPasswordRequired() {
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Password is required')
+    }
+
+    confirmErrorByNameRequired() {
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username is required')
+    }
+
+    confirmErrorByUserInvalid() {
+        this.elements.errorLoginLockedOut().should("be.visible").contains('Epic sadface: Username and password do not match any user in this service')
     }
 
     fillUserName(userName) {
