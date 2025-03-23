@@ -63,7 +63,7 @@ describe('Testes de fluxo de finalizar compra', () => {
         checkoutPage.confirmErrorLastNameRequired();
     })
 
-    it.only('Teste de falhar ao nao preencher codigo postal para checkout', () => {
+    it('Teste de falhar ao nao preencher codigo postal para checkout', () => {
         const dataCheckout = getUserInformationForBuy();
         checkoutPage.confirmGoToCheckout();
         checkoutPage.fillFirstName(dataCheckout.firstName);
