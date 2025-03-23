@@ -2,7 +2,7 @@
 
 ![Cypress Logo](https://github.com/cypress-io/cypress/raw/develop/assets/cypress-logo-dark.png) 
 
-Este repositório contém testes automatizados end-to-end (E2E) utilizando **Cypress** para a aplicação **SwagLabs**, um ambiente desenvolvido para testes automatizados!  
+Este repositório contém testes automatizados end-to-end (E2E) utilizando **Cypress** para a aplicação **SwagLabs**, um ambiente desenvolvido para prática de testes automatizados!  
 
 ![SwagLabs Logo](https://github.com/user-attachments/assets/ebfaf140-63ed-4d6e-b0e2-725f7880bf9d) 
 
