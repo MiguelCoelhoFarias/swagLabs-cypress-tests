@@ -45,7 +45,7 @@ describe('Testes de fluxo de finalizar compra', () => {
     })
 
 
-    it('Teste de falhar ao nao preencher nome para checkout', () => {
+    it('Deve falhar ao nao preencher nome para checkout', () => {
         const dataCheckout = getUserInformationForBuy();
         checkoutPage.confirmGoToCheckout();
         checkoutPage.fillLastName(dataCheckout.lastName);
@@ -54,7 +54,7 @@ describe('Testes de fluxo de finalizar compra', () => {
         checkoutPage.confirmErrorFirstNameRequired();
     })
 
-    it('Teste de falhar ao nao preencher ultimo nome para checkout', () => {
+    it('Deve falhar ao nao preencher ultimo nome para checkout', () => {
         const dataCheckout = getUserInformationForBuy();
         checkoutPage.confirmGoToCheckout();
         checkoutPage.fillFirstName(dataCheckout.firstName);
@@ -63,7 +63,7 @@ describe('Testes de fluxo de finalizar compra', () => {
         checkoutPage.confirmErrorLastNameRequired();
     })
 
-    it('Teste de falhar ao nao preencher codigo postal para checkout', () => {
+    it('Deve falhar ao nao preencher codigo postal para checkout', () => {
         const dataCheckout = getUserInformationForBuy();
         checkoutPage.confirmGoToCheckout();
         checkoutPage.fillFirstName(dataCheckout.firstName);

@@ -46,7 +46,7 @@ describe('Testes de login', () => {
       homePage.confirmHomePage();
     })
 
-    it('testar login com usuário invalido', () => {
+    it('deve falhar ao tentar login com usuário invalido', () => {
       const usuario = getUserValid();
       loginPage.fillUserName(usuario.userName);
       loginPage.fillPassword(usuario.password);
@@ -54,14 +54,14 @@ describe('Testes de login', () => {
       loginPage.confirmErrorByUserInvalid();
     })
 
-    it('testar login com campo Senha vazio', () => {
+    it('deve falhar ao tentar login com campo Senha vazio', () => {
       loginPage.confirmPage();
       loginPage.fillUserName(loginData.loginStandardUser.userName);
       loginPage.clickConfirmLogin();
       loginPage.confirmErrorByPasswordRequired();
     })
 
-    it('testar login com campo Nome de Usuario vazio', () => {
+    it('deve falhar ao tentar login com campo Nome de Usuario vazio', () => {
       loginPage.confirmPage();
       loginPage.fillPassword(loginData.loginStandardUser.password);
       loginPage.clickConfirmLogin();
