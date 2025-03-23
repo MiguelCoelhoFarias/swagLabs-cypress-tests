@@ -1,12 +1,12 @@
 import  loginData  from '../fixtures/loginData.json'
 import  loginPage  from '../support/pages/loginPage'
-import  homePage from '../support/pages/homePage'
+import  homePage from '../support/pages/productPage.js'
 import faker, { getUserValid } from '../support/faker.js'
 
 describe('Testes de login', () => {
 
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/');
   });
 
     it('teste de login com usuário válido - standard_user', () => {
@@ -46,7 +46,6 @@ describe('Testes de login', () => {
       homePage.confirmHomePage();
     })
 
-
     it.only('testar login com usuário invalido', () => {
       const usuario = getUserValid();
       loginPage.fillUserName(usuario.userName);
@@ -54,7 +53,6 @@ describe('Testes de login', () => {
       loginPage.clickConfirmLogin();
       loginPage.confirmErrorByUserInvalid();
     })
-
 
     it('testar login com campo Senha vazio', () => {
       loginPage.confirmPage();
