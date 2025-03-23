@@ -46,7 +46,7 @@ describe('Testes de login', () => {
       homePage.confirmHomePage();
     })
 
-    it.only('testar login com usuário invalido', () => {
+    it('testar login com usuário invalido', () => {
       const usuario = getUserValid();
       loginPage.fillUserName(usuario.userName);
       loginPage.fillPassword(usuario.password);
