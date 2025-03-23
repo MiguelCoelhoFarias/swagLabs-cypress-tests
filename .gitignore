@@ -6,5 +6,13 @@ node_modules
 .env.*
 *.db
 *.db-journal
-cypress/videos
+
+# cypress
+cypress/downloads
 cypress/screenshots
+cypress/videos
+cypress/reports
+cypress/snapshots/**/diffs
+cypress/reports/junit/*
+cucumber-messages.ndjson
+cucumber-report.html
